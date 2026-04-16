@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EDI.NEXT | EDI & API Consulting</title>
+    <meta
+      name="description"
+      content="Futuristische EDI- und API-Services: Automotive, Retail, Finance, Partner-Onboarding, Fehleranalyse und Migrationen."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="#top">
+        <span class="logo-glow"></span>
+        <span>EDI.NEXT</span>
+      </a>
+      <nav class="main-nav" aria-label="Hauptnavigation">
+        <a href="#services">Leistungen</a>
+        <a href="#industries">Sektoren</a>
+        <a href="#experience">Erfahrung</a>
+        <a href="#contact">Kontakt</a>
+      </nav>
+      <a class="button ghost" href="#contact">Projekt anfragen</a>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-content">
+          <p class="eyebrow">EDI & API CONSULTING</p>
+          <h1>Futuristische Integrationslösungen für Ihre digitale Lieferkette</h1>
+          <p>
+            Mehr als 10 Jahre Erfahrung in EDI- und API-Integrationen für Automotive, Retail und
+            Finance. Von OFTP2/AS2 bis SAP Ariba - für stabile Prozesse, klare Transparenz und
+            schnelles Wachstum.
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="#contact">Kostenloses Erstgespräch</a>
+            <a class="button secondary" href="#services">Services entdecken</a>
+          </div>
+        </div>
+        <div class="hero-panel" aria-hidden="true">
+          <p class="panel-title">Live Integration Scope</p>
+          <ul id="highlights-list"></ul>
+        </div>
+      </section>
+
+      <section id="services" class="section">
+        <div class="section-head">
+          <p class="eyebrow">LEISTUNGEN</p>
+          <h2>Was ich für Ihr EDI-Ökosystem umsetze</h2>
+        </div>
+        <div id="services-grid" class="card-grid"></div>
+      </section>
+
+      <section id="industries" class="section">
+        <div class="section-head">
+          <p class="eyebrow">BRANCHEN</p>
+          <h2>Praxiswissen in regulierten und hochdynamischen Märkten</h2>
+        </div>
+        <div id="industries-grid" class="card-grid"></div>
+      </section>
+
+      <section id="experience" class="section split">
+        <div>
+          <p class="eyebrow">TECH STACK</p>
+          <h2>Software, Middleware und ERP mit Hands-on Erfahrung</h2>
+          <p>
+            Ich arbeite seit über einem Jahrzehnt mit komplexen Integrationslandschaften und
+            modernisiere EDI-Systeme mit Fokus auf Performance, Security und Betriebssicherheit.
+          </p>
+          <ul id="tools-list" class="bullets"></ul>
+        </div>
+        <div class="experience-box">
+          <h3>End-to-End Projektansatz</h3>
+          <ol id="process-list"></ol>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact">
+        <div class="section-head">
+          <p class="eyebrow">KONTAKT</p>
+          <h2>Interesse an einem EDI-Optimierungsprojekt?</h2>
+          <p>
+            Senden Sie eine unverbindliche Anfrage. Ich melde mich zeitnah mit einem konkreten
+            Vorschlag für die nächsten Schritte.
+          </p>
+        </div>
+        <form id="contact-form" novalidate>
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required />
+
+          <label for="email">E-Mail</label>
+          <input id="email" name="email" type="email" required />
+
+          <label for="company">Unternehmen</label>
+          <input id="company" name="company" type="text" />
+
+          <label for="message">Projektbeschreibung</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+
+          <button class="button" type="submit">Anfrage vorbereiten</button>
+          <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; <span id="year"></span> EDI.NEXT Consulting</p>
+      <nav aria-label="Rechtliche Links">
+        <a href="./impressum.html">Impressum</a>
+        <a href="./datenschutz.html">Datenschutz</a>
+      </nav>
+    </footer>
+
+    <script src="./assets/app.js"></script>
+  </body>
+</html>
