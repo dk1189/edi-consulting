@@ -1,10 +1,11 @@
-# EDI.NEXT - Futuristische EDI/API Dienstleistungswebseite
+# EDI.NEXT - Futuristische EDI/AI/API Dienstleistungswebseite
 
-Moderne, responsive Webseite zur Vorstellung von EDI- und API-Dienstleistungen mit Fokus auf:
+Moderne, responsive Webseite zur Vorstellung von EDI-, AI- und API-Dienstleistungen mit Fokus auf:
 
 - EDI-Erfahrung in Automotive, Retail und Finance
-- OFTP2-, AS2- und SAP-Ariba-Anbindungen
-- Partner-Onboarding, Fehleranalyse und Migrationen
+- OFTP2-, AS2-, Host-to-Host-, EBICS-, SWIFT- und SAP-Ariba-Anbindungen
+- AI-gestuetzte EDI-Optimierung und konkrete AI Use Cases
+- Self-Service-Portale, Partner-Onboarding, Fehleranalyse und Migrationen
 - Erfahrung mit SEEBURGER BIS, Axway B2Bi, SAP und INFOR
 
 ## Projektstruktur
@@ -28,13 +29,14 @@ python3 -m http.server 8080
 
 Dann im Browser aufrufen: `http://localhost:8080`
 
-## Wichtiger Hinweis vor dem Livegang
+## Rechtlicher Hinweis vor dem Livegang
 
-In den rechtlichen Seiten sind Platzhalter enthalten, die mit realen Daten ersetzt werden muessen:
+Die rechtlichen Seiten wurden mit den bereitgestellten Daten vorbelegt.
+Bitte pruefen Sie vor Veroeffentlichung insbesondere:
 
-- Name/Firma
-- ladungsfaehige Anschrift
-- E-Mail/Telefon
-- ggf. USt-IdNr.
+- korrekte Firmierung und Vertretungsverhaeltnisse
+- aktuelle Kontaktangaben
+- USt-IdNr. (falls vorhanden)
+- ggf. weitere branchenspezifische Pflichtangaben
 
 Dies ersetzt keine individuelle Rechtsberatung.

@@ -1,65 +1,82 @@
 const highlights = [
-  "OFTP2-, AS2- und SAP Ariba-Anbindungen für internationale Partnernetzwerke",
-  "Partner-Onboarding mit klaren Testplänen und produktionsnahen Validierungen",
-  "Migrationen von Legacy-EDI-Landschaften zu resilienten Integrationsarchitekturen",
-  "Schnelle Fehleranalyse in Mapping, Transport und Prozessmonitoring",
+  "EDI mit AI: datengetriebene Priorisierung von Incidents und intelligente Routing-Empfehlungen",
+  "Self-Service-Partneronboarding mit validierten Stammdaten, Leitfaeden und Testautomatisierung",
+  "Branchenspezifische Integrationen von OFTP2 (Automotive) ueber AS2 (Retail) bis SWIFT/EBICS (Finance)",
+  "Migrationen, Stabilisierung und kontinuierliche Prozessoptimierung fuer messbare Betriebsqualitaet",
 ];
 
 const services = [
   {
     title: "EDI Integration Engineering",
-    text: "Konzeption und Umsetzung belastbarer B2B-Integrationen inklusive Mapping, Kommunikationsprofilen und Monitoring.",
+    text: "Konzeption und Umsetzung belastbarer B2B-Integrationen inklusive Mapping, Kommunikationsprofilen, Monitoring und sicherer Betriebsuebergabe.",
   },
   {
-    title: "Partner Onboarding",
-    text: "Strukturierte Onboarding-Prozesse für Lieferanten und Kunden mit Testkoordination und Qualitätskriterien.",
+    title: "EDI mit AI",
+    text: "Ergaenzung klassischer EDI-Prozesse durch AI-gestuetzte Mustererkennung, intelligente Fehlerklassifizierung und priorisierte Bearbeitungspfade.",
+  },
+  {
+    title: "AI-gestuetzte Prozessoptimierung",
+    text: "Identifikation von Bottlenecks in Message-Flows, SLA-Verletzungen und manuellen Taetigkeiten mit klaren Massnahmen zur Durchlaufzeitreduktion.",
+  },
+  {
+    title: "Spezifische AI Use Cases fuer EDI",
+    text: "Use Cases wie Anomalieerkennung in Nachrichten, automatische Mapping-Vorschlaege, Fruehwarnsysteme fuer Partnerprobleme und intelligente Ticket-Triage.",
+  },
+  {
+    title: "Self-Service Portale",
+    text: "Self-Service-Applikationen fuer Partner mit gefuehrter Anbindung, automatisierten Checks und transparentem Status fuer ein deutlich schnelleres Onboarding.",
+  },
+  {
+    title: "Partner Onboarding leicht gemacht",
+    text: "Strukturierte Onboarding-Strecken fuer Lieferanten, Kunden und Banken inklusive technischer Leitlinien, Testplan, Zertifizierung und produktivem Go-live.",
   },
   {
     title: "Fehleranalyse & Stabilisierung",
-    text: "Root-Cause-Analyse wiederkehrender Incidents und Einführung sauberer Betriebs- und Eskalationsprozesse.",
+    text: "Root-Cause-Analysen in Mapping, Konverter, Transport und ERP-Posting mit belastbaren Operating-Standards und Eskalationsprozessen.",
   },
   {
     title: "Migration von EDI-Anwendungen",
-    text: "Risikominimierte Übergänge zwischen Plattformen, inklusive Parallelbetrieb, Cutover-Planung und Hypercare.",
+    text: "Risikominimierte Uebergaenge zwischen Plattformen, inklusive Parallelbetrieb, Cutover-Planung, Datenqualitaetskontrolle und Hypercare.",
   },
   {
     title: "API-/EDI-Konvergenz",
-    text: "Verknüpfung klassischer EDI-Flows mit API-basierten Services für mehr Transparenz und Automatisierung.",
+    text: "Verknuepfung klassischer EDI-Flows mit API-basierten Services fuer End-to-End-Transparenz, Reaktionsgeschwindigkeit und Automatisierung.",
   },
   {
-    title: "Governance & Security",
-    text: "Absicherung von Integrationsprozessen durch klare Standards, Dokumentation und revisionssichere Nachvollziehbarkeit.",
+    title: "Governance, Security & Compliance",
+    text: "Absicherung von Integrationsprozessen durch dokumentierte Standards, Nachvollziehbarkeit, Berechtigungskonzepte und auditierbare Betriebsprozesse.",
   },
 ];
 
 const industries = [
   {
     title: "Automotive",
-    text: "Steuerung komplexer Lieferketten mit hohen Anforderungen an Stabilität, Timing und Nachrichtenqualität.",
+    text: "Fokus auf OFTP2 als etablierten Transportstandard im Automotive-Umfeld sowie stabile Prozesse fuer Lieferabrufe, Lieferscheine, Wareneingaenge und Gutschriftsverfahren.",
   },
   {
     title: "Retail",
-    text: "Skalierbare EDI-Prozesse für Einkaufs-, Logistik- und Rechnungsflüsse in dynamischen Handelsumgebungen.",
+    text: "AS2-basierte Partnerkommunikation fuer hohe Partnerzahlen und dynamische Sortimente mit Blick auf den Order-to-Cash-Prozess von Bestellung ueber Versand bis zur Rechnung.",
   },
   {
     title: "Finance",
-    text: "Integrationslösungen für regulierte Datenflüsse mit Fokus auf Sicherheit, Compliance und Transparenz.",
+    text: "Unternehmen-zu-Bank-Anbindungen ueber Host-to-Host sowie Bank-zu-Bank-Prozesse mit EBICS und SWIFT fuer sichere, regulatorisch belastbare Zahlungs- und Reportingablaeufe.",
   },
 ];
 
 const stack = [
   "Middleware: SEEBURGER BIS, Axway B2Bi",
   "ERP: SAP, INFOR",
-  "Standards & Protokolle: EDIFACT, ANSI X12, OFTP2, AS2",
+  "Standards & Protokolle: EDIFACT, ANSI X12, OFTP2, AS2, EBICS, SWIFT",
   "B2B-Plattformen: SAP Ariba und Partnernetzwerke",
+  "Modernisierung: AI Use Cases fuer Monitoring, Analyse und Incident-Handling",
   "Mehr als 10 Jahre Erfahrung in EDI-/API-Projekten",
 ];
 
 const processSteps = [
-  "IST-Aufnahme, Zielbild und Integrations-Roadmap",
-  "Technisches Design inklusive Mapping- und Kommunikationskonzept",
-  "Umsetzung mit Testautomation, Monitoring und Partnerabstimmung",
-  "Go-Live-Begleitung mit Hypercare und nachhaltigem Wissenstransfer",
+  "IST-Aufnahme, Zielbild und messbare KPIs fuer EDI-, API- und AI-Optimierung",
+  "Technisches Design inklusive Mapping-, Kommunikations- und Self-Service-Konzept",
+  "Umsetzung mit Partnerabstimmung, Testautomation und AI-gestuetztem Monitoring",
+  "Go-live-Begleitung mit Hypercare, Wissenstransfer und kontinuierlicher Verbesserung",
 ];
 
 function renderList(items, targetId) {
@@ -95,9 +112,15 @@ function initContactForm() {
     const email = String(data.get("email") || "").trim();
     const company = String(data.get("company") || "").trim();
     const message = String(data.get("message") || "").trim();
+    const hasConsent = data.get("privacy-consent") === "on";
 
     if (!name || !email || !message) {
-      messageBox.textContent = "Bitte Name, E-Mail und Projektbeschreibung ausfüllen.";
+      messageBox.textContent = "Bitte Name, E-Mail und Projektbeschreibung ausfuellen.";
+      return;
+    }
+
+    if (!hasConsent) {
+      messageBox.textContent = "Bitte bestaetigen Sie die Datenschutzerklaerung.";
       return;
     }
 
@@ -107,8 +130,8 @@ function initContactForm() {
     );
 
     messageBox.textContent =
-      "Ihre Anfrage wurde vorbereitet. Ihr E-Mail-Programm öffnet sich jetzt.";
-    window.location.href = `mailto:kontakt@edi-next.example?subject=${subject}&body=${body}`;
+      "Ihre Anfrage wurde vorbereitet. Ihr E-Mail-Programm oeffnet sich jetzt.";
+    window.location.href = `mailto:kontakt@edi-next.de?subject=${subject}&body=${body}`;
   });
 }
 
