@@ -105,7 +105,21 @@ function initContactForm() {
   const messageBox = document.getElementById("form-message");
   if (!form || !messageBox) return;
 
-  form.addEventListener("submit", (event) => {
+  const encodedAddress = form.getAttribute("data-mail");
+  if (!encodedAddress) return;
+
+  let endpoint = "";
+  try {
+    const emailAddress = atob(encodedAddress);
+    endpoint = `https://formsubmit.co/ajax/${emailAddress}`;
+  } catch (error) {
+    messageBox.textContent = "Kontaktformular ist aktuell nicht verfuegbar.";
+    return;
+  }
+
+  if (!endpoint) return;
+
+  form.addEventListener("submit", async (event) => {
     event.preventDefault();
     const data = new FormData(form);
     const name = String(data.get("name") || "").trim();
@@ -124,14 +138,42 @@ function initContactForm() {
       return;
     }
 
-    const subject = encodeURIComponent(`Projektanfrage EDI/API von ${name}`);
-    const body = encodeURIComponent(
-      `Name: ${name}\nE-Mail: ${email}\nUnternehmen: ${company || "-"}\n\nProjektbeschreibung:\n${message}`,
-    );
+    messageBox.textContent = "Ihre Anfrage wird gerade sicher uebermittelt...";
 
-    messageBox.textContent =
-      "Ihre Anfrage wurde vorbereitet. Ihr E-Mail-Programm oeffnet sich jetzt.";
-    window.location.href = `mailto:kontakt@nextedi.ai?subject=${subject}&body=${body}`;
+    const payload = {
+      name,
+      email,
+      company: company || "-",
+      message,
+      source: window.location.href,
+      submittedAt: new Date().toISOString(),
+    };
+
+    try {
+      const response = await fetch(endpoint, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) {
+        throw new Error(`Request failed: ${response.status}`);
+      }
+      const result = await response.json();
+      if (result.success !== "true") {
+        throw new Error("Form provider returned error");
+      }
+
+      form.reset();
+      messageBox.textContent =
+        "Vielen Dank. Ihre Anfrage wurde erfolgreich gesendet. Ich melde mich zeitnah zurueck.";
+    } catch (error) {
+      messageBox.textContent =
+        "Der Versand war leider nicht erfolgreich. Bitte versuchen Sie es spaeter erneut.";
+    }
   });
 }
 
