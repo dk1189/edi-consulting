@@ -105,7 +105,18 @@ function initContactForm() {
   const messageBox = document.getElementById("form-message");
   if (!form || !messageBox) return;
 
-  const endpoint = form.getAttribute("action");
+  const encodedAddress = form.getAttribute("data-mail");
+  if (!encodedAddress) return;
+
+  let endpoint = "";
+  try {
+    const emailAddress = atob(encodedAddress);
+    endpoint = `https://formsubmit.co/ajax/${emailAddress}`;
+  } catch (error) {
+    messageBox.textContent = "Kontaktformular ist aktuell nicht verfuegbar.";
+    return;
+  }
+
   if (!endpoint) return;
 
   form.addEventListener("submit", async (event) => {
@@ -150,6 +161,10 @@ function initContactForm() {
 
       if (!response.ok) {
         throw new Error(`Request failed: ${response.status}`);
+      }
+      const result = await response.json();
+      if (result.success !== "true") {
+        throw new Error("Form provider returned error");
       }
 
       form.reset();
