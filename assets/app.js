@@ -100,6 +100,7 @@ function initContactForm() {
   const form = document.getElementById("contact-form");
   const messageBox = document.getElementById("form-message");
   if (!form || !messageBox) return;
+  const submitButton = form.querySelector('button[type="submit"]');
 
   const encodedAddress = form.getAttribute("data-mail");
   if (!encodedAddress) return;
@@ -135,6 +136,7 @@ function initContactForm() {
     }
 
     messageBox.textContent = "Ihre Anfrage wird gerade sicher uebermittelt...";
+    if (submitButton) submitButton.disabled = true;
 
     const payload = {
       name,
@@ -155,20 +157,55 @@ function initContactForm() {
         body: JSON.stringify(payload),
       });
 
-      if (!response.ok) {
-        throw new Error(`Request failed: ${response.status}`);
+      const responseType = response.headers.get("content-type") || "";
+      let result = null;
+      if (responseType.includes("application/json")) {
+        result = await response.json();
+      } else {
+        const textBody = await response.text();
+        try {
+          result = JSON.parse(textBody);
+        } catch (parseError) {
+          result = { raw: textBody };
+        }
       }
-      const result = await response.json();
-      if (result.success !== "true") {
-        throw new Error("Form provider returned error");
+
+      if (!response.ok) {
+        throw new Error(result?.message || `Request failed: ${response.status}`);
+      }
+
+      const successValue = result?.success;
+      const isSuccess =
+        successValue === true ||
+        successValue === "true" ||
+        successValue === 1 ||
+        successValue === "1" ||
+        successValue === undefined;
+
+      if (!isSuccess) {
+        throw new Error(
+          result?.message ||
+            "Bitte bestaetigen Sie ggf. die Aktivierungs-E-Mail von FormSubmit und senden Sie danach erneut.",
+        );
       }
 
       form.reset();
       messageBox.textContent =
         "Vielen Dank. Ihre Anfrage wurde erfolgreich gesendet. Ich melde mich zeitnah zurueck.";
     } catch (error) {
-      messageBox.textContent =
-        "Der Versand war leider nicht erfolgreich. Bitte versuchen Sie es spaeter erneut.";
+      const rawMessage = String(error?.message || "").trim();
+      const lowerMessage = rawMessage.toLowerCase();
+      if (lowerMessage.includes("confirm") || lowerMessage.includes("activate")) {
+        messageBox.textContent =
+          "Bitte bestaetigen Sie einmalig die Aktivierungs-E-Mail von FormSubmit und senden Sie Ihre Anfrage danach erneut.";
+      } else if (rawMessage) {
+        messageBox.textContent = `Der Versand war leider nicht erfolgreich. Hinweis: ${rawMessage}`;
+      } else {
+        messageBox.textContent =
+          "Der Versand war leider nicht erfolgreich. Bitte versuchen Sie es spaeter erneut.";
+      }
+    } finally {
+      if (submitButton) submitButton.disabled = false;
     }
   });
 }
