@@ -1,4 +1,4 @@
-# NextGenEDI.ai - Futuristische EDI/AI/API Dienstleistungswebseite
+# NextEDI.ai - Futuristische EDI/AI/API Dienstleistungswebseite
 
 Moderne, responsive Webseite zur Vorstellung von EDI-, AI- und API-Dienstleistungen mit Fokus auf:
 

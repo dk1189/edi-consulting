@@ -131,7 +131,7 @@ function initContactForm() {
 
     messageBox.textContent =
       "Ihre Anfrage wurde vorbereitet. Ihr E-Mail-Programm oeffnet sich jetzt.";
-    window.location.href = `mailto:kontakt@edi-next.de?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:kontakt@nextedi.ai?subject=${subject}&body=${body}`;
   });
 }
 
