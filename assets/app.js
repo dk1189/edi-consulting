@@ -1,5 +1,5 @@
 const highlights = [
-  "EDI mit AI: datengetriebene Priorisierung von Incidents und intelligente Routing-Empfehlungen",
+  "EDI mit AI: Prozessoptimierung durch den Einsatz von AI, Vereinfachung der IT Prozesse für den Business User.",
   "Self-Service-Partneronboarding mit validierten Stammdaten, Leitfaeden und Testautomatisierung",
   "Branchenspezifische Integrationen von OFTP2 (Automotive) ueber AS2 (Retail) bis SWIFT/EBICS (Finance)",
   "Migrationen, Stabilisierung und kontinuierliche Prozessoptimierung fuer messbare Betriebsqualitaet",
@@ -7,28 +7,28 @@ const highlights = [
 
 const services = [
   {
-    title: "EDI Integration Engineering",
+    title: "EDI Integration",
     text: "Konzeption und Umsetzung belastbarer B2B-Integrationen inklusive Mapping, Kommunikationsprofilen, Monitoring und sicherer Betriebsuebergabe.",
   },
   {
     title: "EDI mit AI",
-    text: "Ergaenzung klassischer EDI-Prozesse durch AI-gestuetzte Mustererkennung, intelligente Fehlerklassifizierung und priorisierte Bearbeitungspfade.",
+    text: "Ergänzung klassischer EDI-Prozesse durch AI-gestützte Mustererkennung, intelligente Fehlerklassifizierung und priorisierte Bearbeitungspfade.",
   },
   {
-    title: "AI-gestuetzte Prozessoptimierung",
-    text: "Identifikation von Bottlenecks in Message-Flows, SLA-Verletzungen und manuellen Taetigkeiten mit klaren Massnahmen zur Durchlaufzeitreduktion.",
+    title: "AI-gestützte Prozessoptimierung",
+    text: "Agentenbasierte Fehlererkennung und Behebung, Verwenden von Chatbots zur Vereinfachung der EDI für den Business Anwender.",
   },
   {
-    title: "Spezifische AI Use Cases fuer EDI",
+    title: "Spezifische AI Use Cases für EDI",
     text: "Use Cases wie Anomalieerkennung in Nachrichten, automatische Mapping-Vorschlaege, Fruehwarnsysteme fuer Partnerprobleme und intelligente Ticket-Triage.",
   },
   {
     title: "Self-Service Portale",
-    text: "Self-Service-Applikationen fuer Partner mit gefuehrter Anbindung, automatisierten Checks und transparentem Status fuer ein deutlich schnelleres Onboarding.",
+    text: "Self-Service-Applikationen fuer Partner mit geführter Anbindung, automatisierten Checks und transparentem Status fuer ein deutlich schnelleres Onboarding.",
   },
   {
-    title: "Partner Onboarding leicht gemacht",
-    text: "Strukturierte Onboarding-Strecken fuer Lieferanten, Kunden und Banken inklusive technischer Leitlinien, Testplan, Zertifizierung und produktivem Go-live.",
+    title: "Partner Onboarding",
+    text: "Strukturierte Onboarding-Strecken für Lieferanten, Kunden und Banken inklusive technischer Leitlinien, Testplan, Zertifizierung und produktivem Go-live.",
   },
   {
     title: "Fehleranalyse & Stabilisierung",
@@ -36,15 +36,11 @@ const services = [
   },
   {
     title: "Migration von EDI-Anwendungen",
-    text: "Risikominimierte Uebergaenge zwischen Plattformen, inklusive Parallelbetrieb, Cutover-Planung, Datenqualitaetskontrolle und Hypercare.",
+    text: "Risikominimierte Übergaenge zwischen Plattformen, inklusive Parallelbetrieb, Cutover-Planung, Datenqualitätskontrolle und Hypercare.",
   },
   {
     title: "API-/EDI-Konvergenz",
-    text: "Verknuepfung klassischer EDI-Flows mit API-basierten Services fuer End-to-End-Transparenz, Reaktionsgeschwindigkeit und Automatisierung.",
-  },
-  {
-    title: "Governance, Security & Compliance",
-    text: "Absicherung von Integrationsprozessen durch dokumentierte Standards, Nachvollziehbarkeit, Berechtigungskonzepte und auditierbare Betriebsprozesse.",
+    text: "Verknüpfung klassischer EDI-Flows mit API-basierten Services für End-to-End-Transparenz, Reaktionsgeschwindigkeit und Automatisierung.",
   },
 ];
 
@@ -64,8 +60,8 @@ const industries = [
 ];
 
 const stack = [
-  "Middleware: SEEBURGER BIS, Axway B2Bi",
-  "ERP: SAP, INFOR",
+  "Middleware: SEEBURGER BIS, Axway B2Bi, Amplify Fusion",
+  "ERP: SAP ECC, INFOR",
   "Standards & Protokolle: EDIFACT, ANSI X12, OFTP2, AS2, EBICS, SWIFT",
   "B2B-Plattformen: SAP Ariba und Partnernetzwerke",
   "Modernisierung: AI Use Cases fuer Monitoring, Analyse und Incident-Handling",
