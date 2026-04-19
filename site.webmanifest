@@ -1,0 +1,11 @@
+{
+  "name": "NextGenEDI Consulting",
+  "short_name": "NextGenEDI",
+  "description": "EDI, API und AI Integrationsberatung fuer Automotive, Retail und Finance.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#05070f",
+  "theme_color": "#05070f",
+  "lang": "de-DE",
+  "icons": []
+}
