@@ -146,7 +146,12 @@
             Vorschlag für die nächsten Schritte.
           </p>
         </div>
-        <form id="contact-form" novalidate>
+        <form
+          id="contact-form"
+          action="https://formspree.io/f/xeqyvzpo"
+          method="post"
+          novalidate
+        >
           <label for="name">Name</label>
           <input id="name" name="name" type="text" required />
 
@@ -159,6 +164,15 @@
           <label for="message">Projektbeschreibung</label>
           <textarea id="message" name="message" rows="5" required></textarea>
 
+          <input
+            type="text"
+            name="_honey"
+            tabindex="-1"
+            autocomplete="off"
+            aria-hidden="true"
+            class="visually-hidden"
+          />
+
           <label class="consent-row" for="privacy-consent">
             <input id="privacy-consent" name="privacy-consent" type="checkbox" required />
             <span>
@@ -170,7 +184,7 @@
             </span>
           </label>
 
-          <button class="button" type="submit">Anfrage vorbereiten</button>
+          <button class="button" type="submit">Anfrage senden</button>
           <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
         </form>
       </section>
