@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dk1189.github.io/dk1189/sitemap.xml

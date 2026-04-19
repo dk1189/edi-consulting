@@ -1,4 +1,4 @@
-# EDI.NEXT - Futuristische EDI/AI/API Dienstleistungswebseite
+# NextGenEDI.ai - Futuristische EDI/AI/API Dienstleistungswebseite
 
 Moderne, responsive Webseite zur Vorstellung von EDI-, AI- und API-Dienstleistungen mit Fokus auf:
 
@@ -15,6 +15,10 @@ Moderne, responsive Webseite zur Vorstellung von EDI-, AI- und API-Dienstleistun
 - `assets/app.js` - dynamische Inhalte und Kontaktformular-Logik
 - `impressum.html` - Impressum
 - `datenschutz.html` - Datenschutzerklaerung
+- `sitemap.xml` - Sitemap fuer Suchmaschinen
+- `robots.txt` - Crawling-Regeln
+- `site.webmanifest` - Basis-Metadaten fuer PWA/Installierbarkeit
+- `.github/workflows/deploy-pages.yml` - automatisches Deployment auf GitHub Pages
 
 ## Lokal starten
 
@@ -28,6 +32,23 @@ python3 -m http.server 8080
 ```
 
 Dann im Browser aufrufen: `http://localhost:8080`
+
+## Deployment auf GitHub Pages (kostenlose Domain)
+
+Die Seite wird per GitHub Actions automatisch auf GitHub Pages deployed.
+
+Nach dem Merge auf `main` ist sie unter folgender URL erreichbar:
+
+`https://dk1189.github.io/dk1189/`
+
+Optional kann spaeter eine eigene Domain verbunden werden.
+
+## Google-Sichtbarkeit (Basis-Setup)
+
+1. Property in Google Search Console anlegen (`URL-Praefix`: `https://dk1189.github.io/dk1189/`)
+2. `sitemap.xml` in Search Console einreichen (`https://dk1189.github.io/dk1189/sitemap.xml`)
+3. Google Business Profile einrichten und auf die Website verlinken
+4. Regelmaessig fachliche Inhalte/Referenzen ergaenzen und Backlinks aufbauen
 
 ## Rechtlicher Hinweis vor dem Livegang
 
