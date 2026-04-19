@@ -39,14 +39,14 @@ Die Seite wird per GitHub Actions automatisch auf GitHub Pages deployed.
 
 Nach dem Merge auf `main` ist sie unter folgender URL erreichbar:
 
-`https://dk1189.github.io/dk1189/`
+`https://dk1189.github.io/edi-consulting/`
 
 Optional kann spaeter eine eigene Domain verbunden werden.
 
 ## Google-Sichtbarkeit (Basis-Setup)
 
-1. Property in Google Search Console anlegen (`URL-Praefix`: `https://dk1189.github.io/dk1189/`)
-2. `sitemap.xml` in Search Console einreichen (`https://dk1189.github.io/dk1189/sitemap.xml`)
+1. Property in Google Search Console anlegen (`URL-Praefix`: `https://dk1189.github.io/edi-consulting/`)
+2. `sitemap.xml` in Search Console einreichen (`https://dk1189.github.io/edi-consulting/sitemap.xml`)
 3. Google Business Profile einrichten und auf die Website verlinken
 4. Regelmaessig fachliche Inhalte/Referenzen ergaenzen und Backlinks aufbauen
 
