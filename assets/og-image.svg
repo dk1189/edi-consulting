@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="NextEDI.ai">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#04060d" />
+      <stop offset="45%" stop-color="#0a1228" />
+      <stop offset="100%" stop-color="#060816" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#5be7ff" />
+      <stop offset="100%" stop-color="#7a6dff" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <circle cx="180" cy="120" r="220" fill="#5be7ff" fill-opacity="0.1" />
+  <circle cx="1050" cy="120" r="240" fill="#7a6dff" fill-opacity="0.14" />
+  <g transform="translate(90 120)">
+    <rect x="0" y="0" width="1020" height="390" rx="22" fill="#111b34" fill-opacity="0.7" stroke="#ffffff" stroke-opacity="0.18" />
+    <circle cx="60" cy="60" r="14" fill="url(#accent)" />
+    <text x="95" y="73" fill="#f4f7ff" font-family="Inter, Arial, sans-serif" font-size="56" font-weight="800">
+      NextEDI.ai
+    </text>
+    <text x="60" y="150" fill="#5be7ff" font-family="Inter, Arial, sans-serif" font-size="26" letter-spacing="2">
+      EDI " API " AI INTEGRATIONSBERATUNG
+    </text>
+    <text x="60" y="215" fill="#c8d4f8" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="600">
+      Automotive · Retail · Finance
+    </text>
+    <text x="60" y="270" fill="#a5b1d1" font-family="Inter, Arial, sans-serif" font-size="24">
+      OFTP2 / AS2 / EBICS / SWIFT / SAP Ariba
+    </text>
+    <text x="60" y="320" fill="#a5b1d1" font-family="Inter, Arial, sans-serif" font-size="24">
+      AI Use Cases · Self-Service Onboarding · Migrationen
+    </text>
+  </g>
+</svg>
