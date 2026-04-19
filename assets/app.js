@@ -105,108 +105,65 @@ function initContactForm() {
   const encodedAddress = form.getAttribute("data-mail");
   if (!encodedAddress) return;
 
-  let endpoint = "";
+  let emailAddress = "";
   try {
-    const emailAddress = atob(encodedAddress);
-    endpoint = `https://formsubmit.co/ajax/${emailAddress}`;
+    emailAddress = atob(encodedAddress);
   } catch (error) {
     messageBox.textContent = "Kontaktformular ist aktuell nicht verfuegbar.";
     return;
   }
 
-  if (!endpoint) return;
+  if (!emailAddress) return;
 
-  form.addEventListener("submit", async (event) => {
-    event.preventDefault();
+  form.setAttribute("action", `https://formsubmit.co/${emailAddress}`);
+  form.setAttribute("method", "POST");
+
+  const nextInput = form.querySelector('input[name="_next"]');
+  if (nextInput) {
+    const nextUrl = new URL(window.location.href);
+    nextUrl.searchParams.set("sent", "1");
+    nextUrl.hash = "contact";
+    nextInput.value = nextUrl.toString();
+  }
+
+  const queryParams = new URLSearchParams(window.location.search);
+  if (queryParams.get("sent") === "1") {
+    messageBox.textContent =
+      "Vielen Dank. Ihre Anfrage wurde erfolgreich gesendet. Ich melde mich zeitnah zurueck.";
+    queryParams.delete("sent");
+    const newQuery = queryParams.toString();
+    const newUrl = `${window.location.pathname}${newQuery ? `?${newQuery}` : ""}${window.location.hash}`;
+    window.history.replaceState({}, "", newUrl);
+  }
+
+  form.addEventListener("submit", (event) => {
     const data = new FormData(form);
     const name = String(data.get("name") || "").trim();
     const email = String(data.get("email") || "").trim();
-    const company = String(data.get("company") || "").trim();
     const message = String(data.get("message") || "").trim();
     const hasConsent = data.get("privacy-consent") === "on";
 
     if (!name || !email || !message) {
+      event.preventDefault();
       messageBox.textContent = "Bitte Name, E-Mail und Projektbeschreibung ausfuellen.";
       return;
     }
 
     if (!hasConsent) {
+      event.preventDefault();
       messageBox.textContent = "Bitte bestaetigen Sie die Datenschutzerklaerung.";
       return;
     }
 
-    messageBox.textContent = "Ihre Anfrage wird gerade sicher uebermittelt...";
-    if (submitButton) submitButton.disabled = true;
-
-    const payload = {
-      name,
-      email,
-      company: company || "-",
-      message,
-      source: window.location.href,
-      submittedAt: new Date().toISOString(),
-    };
-
-    try {
-      const response = await fetch(endpoint, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify(payload),
-      });
-
-      const responseType = response.headers.get("content-type") || "";
-      let result = null;
-      if (responseType.includes("application/json")) {
-        result = await response.json();
-      } else {
-        const textBody = await response.text();
-        try {
-          result = JSON.parse(textBody);
-        } catch (parseError) {
-          result = { raw: textBody };
-        }
-      }
-
-      if (!response.ok) {
-        throw new Error(result?.message || `Request failed: ${response.status}`);
-      }
-
-      const successValue = result?.success;
-      const isSuccess =
-        successValue === true ||
-        successValue === "true" ||
-        successValue === 1 ||
-        successValue === "1" ||
-        successValue === undefined;
-
-      if (!isSuccess) {
-        throw new Error(
-          result?.message ||
-            "Bitte bestaetigen Sie ggf. die Aktivierungs-E-Mail von FormSubmit und senden Sie danach erneut.",
-        );
-      }
-
-      form.reset();
-      messageBox.textContent =
-        "Vielen Dank. Ihre Anfrage wurde erfolgreich gesendet. Ich melde mich zeitnah zurueck.";
-    } catch (error) {
-      const rawMessage = String(error?.message || "").trim();
-      const lowerMessage = rawMessage.toLowerCase();
-      if (lowerMessage.includes("confirm") || lowerMessage.includes("activate")) {
-        messageBox.textContent =
-          "Bitte bestaetigen Sie einmalig die Aktivierungs-E-Mail von FormSubmit und senden Sie Ihre Anfrage danach erneut.";
-      } else if (rawMessage) {
-        messageBox.textContent = `Der Versand war leider nicht erfolgreich. Hinweis: ${rawMessage}`;
-      } else {
-        messageBox.textContent =
-          "Der Versand war leider nicht erfolgreich. Bitte versuchen Sie es spaeter erneut.";
-      }
-    } finally {
-      if (submitButton) submitButton.disabled = false;
+    const honeyValue = String(data.get("_honey") || "").trim();
+    if (honeyValue) {
+      event.preventDefault();
+      messageBox.textContent = "Ihre Anfrage konnte nicht verarbeitet werden.";
+      return;
     }
+
+    messageBox.textContent = "Ihre Anfrage wird versendet...";
+    if (submitButton) submitButton.disabled = true;
   });
 }
 
