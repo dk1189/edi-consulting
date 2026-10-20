@@ -6,27 +6,35 @@
     <title>NextEDI.ai | EDI, API & AI Integrationsberatung</title>
     <meta
       name="description"
-      content="NextEDI.ai bietet EDI-, API- und AI-Integrationsberatung: Von Partner Onboarding, Self-Service, Fehleranalyse und Migration."
+      content="AI-gestuetzte EDI-Migrationen sowie MCP, um Applikationen AI-faehig zu machen. SEEBURGER BIS, Axway B2Bi, TSIM, Amplify Fusion und AI Gateway."
+    />
+    <meta
+      name="keywords"
+      content="EDI Migration, AI EDI, MCP Server, SEEBURGER BIS, Axway B2Bi, Axway TSIM, Amplify Fusion, Axway AI Gateway, OFTP2, AS2"
     />
     <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
-    <link rel="canonical" href="https://dk1189.github.io/edi-consulting/" />
+    <link rel="canonical" href="https://nextedi.ai/" />
+    <link rel="alternate" hreflang="de" href="https://nextedi.ai/" />
+    <link rel="alternate" hreflang="en" href="https://nextedi.ai/en/" />
+    <link rel="alternate" hreflang="x-default" href="https://nextedi.ai/" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="de_DE" />
+    <meta property="og:locale:alternate" content="en_US" />
     <meta property="og:title" content="NextEDI.ai | EDI, API & AI Integrationsberatung" />
     <meta
       property="og:description"
-      content="Mehr als 10 Jahre Erfahrung in EDI- und API-Projekten mit AI-gestuetzter Prozessoptimierung."
+      content="AI-gestuetzte EDI-Migrationen. Separat: MCP fuer AI-faehige Apps. SEEBURGER BIS, Axway B2Bi, TSIM, Amplify Fusion, AI Gateway."
     />
-    <meta property="og:url" content="https://dk1189.github.io/edi-consulting/" />
+    <meta property="og:url" content="https://nextedi.ai/" />
     <meta property="og:site_name" content="NextEDI.ai" />
-    <meta property="og:image" content="https://dk1189.github.io/edi-consulting/assets/og-image.svg" />
+    <meta property="og:image" content="https://nextedi.ai/assets/og-image.svg" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="NextEDI.ai | EDI, API & AI Integrationsberatung" />
     <meta
       name="twitter:description"
-      content="Spezialisierte Beratung fuer EDI, API und AI in Automotive, Retail und Finance."
+      content="AI-gestuetzte EDI-Migrationen und MCP fuer kontrollierte AI-Anbindung. SEEBURGER, Axway B2Bi/TSIM, Amplify Fusion, AI Gateway."
     />
-    <meta name="twitter:image" content="https://dk1189.github.io/edi-consulting/assets/og-image.svg" />
+    <meta name="twitter:image" content="https://nextedi.ai/assets/og-image.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -39,9 +47,10 @@
         "@context": "https://schema.org",
         "@type": "ProfessionalService",
         "name": "NextEDI.ai",
-        "url": "https://dk1189.github.io/edi-consulting/",
-        "description": "Beratung und Umsetzung fuer EDI, API und AI in B2B-Integrationsprozessen.",
-        "areaServed": "DACH",
+        "url": "https://nextedi.ai/",
+        "description": "Beratung fuer EDI, API, AI-gestuetzte Migrationen sowie MCP zur kontrollierten AI-Anbindung von Applikationen.",
+        "areaServed": ["DACH", "EU", "Worldwide"],
+        "inLanguage": ["de", "en"],
         "founder": {
           "@type": "Person",
           "name": "David Karaoglan"
@@ -57,14 +66,19 @@
         "knowsAbout": [
           "EDI",
           "API Integration",
-          "AI in EDI",
+          "AI-assisted EDI migration",
+          "Model Context Protocol",
+          "MCP Server",
           "OFTP2",
           "AS2",
           "EBICS",
           "SWIFT",
           "SAP Ariba",
           "SEEBURGER BIS",
-          "Axway B2Bi"
+          "Axway B2Bi",
+          "Axway TSIM",
+          "Axway Amplify Fusion",
+          "Axway AI Gateway"
         ]
       }
     </script>
@@ -76,74 +90,122 @@
         <span>NextEDI.ai</span>
       </a>
       <nav class="main-nav" aria-label="Hauptnavigation">
-        <a href="#services">Leistungen</a>
-        <a href="#industries">Sektoren</a>
-        <a href="#experience">Erfahrung</a>
-        <a href="#contact">Kontakt</a>
+        <a id="nav-services" href="#services">Leistungen</a>
+        <a id="nav-platforms" href="#platforms">Plattformen</a>
+        <a id="nav-migration" href="#migration">AI-Migration</a>
+        <a id="nav-mcp" href="#mcp">MCP</a>
+        <a id="nav-industries" href="#industries">Sektoren</a>
+        <a id="nav-experience" href="#experience">Erfahrung</a>
+        <a id="nav-contact" href="#contact">Kontakt</a>
       </nav>
-      <a class="button ghost" href="#contact">Projekt anfragen</a>
+      <div class="header-actions">
+        <div class="lang-switch" aria-label="Language">
+          <a class="is-active" href="./" data-lang-link="de" hreflang="de">DE</a>
+          <a href="./en/" data-lang-link="en" hreflang="en">EN</a>
+        </div>
+        <a id="nav-cta" class="button ghost" href="#contact">Projekt anfragen</a>
+      </div>
     </header>
 
     <main id="top">
       <section class="hero">
         <div class="hero-content">
-          <p class="eyebrow">EDI, AI & API CONSULTING</p>
-          <h1>Moderne Integrationslösungen für EDI mit API mit Verwendung von AI</h1>
-          <p>
-            Mehr als 10 Jahre Erfahrung in EDI- und API-Integrationen fuer Automotive, Retail und
-            Finance. Von OFTP2, AS2, SAP Ariba und Host-to-Host bis zu AI-gestuetzter
-            Prozessoptimierung für Agentenbasiertes Monitoring, automatisierte Workflows und effizienter Prozesse.
+          <p id="hero-eyebrow" class="eyebrow">EDI · API · AI · MCP</p>
+          <h1 id="hero-title">EDI-Migrationen und Integrationen – beschleunigt mit AI</h1>
+          <p id="hero-text">
+            Mehr als 10 Jahre Praxis in EDI- und API-Landschaften fuer Automotive, Retail und Finance.
+            Von SEEBURGER BIS und Axway B2Bi/TSIM bis Amplify Fusion und AI Gateway – inklusive
+            AI-gestuetzter Migrationen. Separat: MCP, um Applikationen kontrolliert AI-faehig zu machen.
           </p>
           <div class="hero-actions">
-            <a class="button" href="#contact">Kostenloses Erstgespräch</a>
-            <a class="button secondary" href="#services">Services entdecken</a>
+            <a id="hero-cta-primary" class="button" href="#contact">Kostenloses Erstgespraech</a>
+            <a id="hero-cta-secondary" class="button secondary" href="#services">Services entdecken</a>
           </div>
         </div>
         <div class="hero-panel" aria-hidden="true">
-          <p class="panel-title">Live Integration Scope</p>
+          <p id="panel-title" class="panel-title">Fokus heute</p>
           <ul id="highlights-list"></ul>
         </div>
       </section>
 
       <section id="services" class="section">
         <div class="section-head">
-          <p class="eyebrow">LEISTUNGEN</p>
-          <h2>Was ich für Ihr EDI-Umgebung konkret umsetze</h2>
+          <p id="services-eyebrow" class="eyebrow">LEISTUNGEN</p>
+          <h2 id="services-title">Was ich fuer Ihre Integrationslandschaft konkret umsetze</h2>
         </div>
         <div id="services-grid" class="card-grid"></div>
       </section>
 
+      <section id="platforms" class="section">
+        <div class="section-head">
+          <p id="platforms-eyebrow" class="eyebrow">PLATTFORMEN</p>
+          <h2 id="platforms-title">Middleware und AI-Stack mit belastbarer Praxiserfahrung</h2>
+          <p id="platforms-text">
+            Unabhaengig vom Migrationspfad: tiefes Betriebs- und Projektwissen auf den gaengigen
+            B2B- und API-Plattformen.
+          </p>
+        </div>
+        <div id="platforms-grid" class="card-grid"></div>
+      </section>
+
+      <section id="migration" class="section">
+        <div class="section-head">
+          <p id="migration-eyebrow" class="eyebrow">AI-MIGRATION</p>
+          <h2 id="migration-title">Migrationen effizient gestalten – mit AI</h2>
+          <p id="migration-text">
+            Migrationen stehen fuer sich: AI beschleunigt Analyse, Mapping und Tests. MCP ist kein
+            Bestandteil dieses Pfads – sondern ein eigener Baustein fuer AI-faehige Applikationen.
+          </p>
+        </div>
+        <div id="migration-grid" class="card-grid steps-grid"></div>
+      </section>
+
+      <section id="mcp" class="section">
+        <div class="section-head">
+          <p id="mcp-eyebrow" class="eyebrow">MCP</p>
+          <h2 id="mcp-title">Applikationen AI-faehig machen – kontrolliert mit MCP</h2>
+          <p id="mcp-text">
+            Model Context Protocol als eigener Schwerpunkt: Anwendungen so anbinden, dass AI gezielt
+            und nachvollziehbar handeln darf – nicht unkontrolliert.
+          </p>
+        </div>
+        <div id="mcp-grid" class="card-grid"></div>
+      </section>
+
       <section id="industries" class="section">
         <div class="section-head">
-          <p class="eyebrow">BRANCHEN</p>
-          <h2>Branchenspezifische Umsetzung mit Prozess- und Protokolltiefe</h2>
+          <p id="industries-eyebrow" class="eyebrow">BRANCHEN</p>
+          <h2 id="industries-title">Branchenspezifische Umsetzung mit Prozess- und Protokolltiefe</h2>
         </div>
         <div id="industries-grid" class="card-grid"></div>
       </section>
 
       <section id="experience" class="section split">
         <div>
-          <p class="eyebrow">TECH STACK</p>
-          <h2>Software, Middleware und ERP mit belastbarer Praxiserfahrung</h2>
-          <p>
-            Ich arbeite seit über einem Jahrzehnt mit komplexen Integrationslandschaften und
-            modernisiere EDI-Systeme mit Fokus auf Performance, Security und Betriebssicherheit.
+          <p id="experience-eyebrow" class="eyebrow">TECH STACK</p>
+          <h2 id="experience-title">Software, Middleware und ERP mit Praxiserfahrung</h2>
+          <p id="experience-text">
+            Seit ueber einem Jahrzehnt modernisiere ich Integrationslandschaften mit Fokus auf
+            Performance, Security und Betriebssicherheit – ergaenzt um AI in Migrationen und separat
+            um MCP fuer AI-faehige Applikationen.
           </p>
           <ul id="tools-list" class="bullets"></ul>
         </div>
         <div class="experience-box">
-          <h3>End-to-End Projektansatz</h3>
+          <h3 id="process-title">End-to-End Projektansatz</h3>
           <ol id="process-list"></ol>
         </div>
       </section>
 
       <section id="contact" class="section contact">
         <div class="section-head">
-          <p class="eyebrow">KONTAKT</p>
-          <h2>Interesse an einem EDI-/AI-Optimierungsprojekt?</h2>
-          <p>
+          <p id="contact-eyebrow" class="eyebrow">KONTAKT</p>
+          <h2 id="contact-title">
+            Interesse an AI-gestuetzter Migration, MCP oder Plattform-Optimierung?
+          </h2>
+          <p id="contact-text">
             Senden Sie eine unverbindliche Anfrage. Ich melde mich zeitnah mit einem konkreten
-            Vorschlag für die nächsten Schritte.
+            Vorschlag fuer die naechsten Schritte.
           </p>
         </div>
         <form
@@ -152,16 +214,16 @@
           data-mail="ZGF2aWRrMDQ4OUBnbWFpbC5jb20="
           novalidate
         >
-          <label for="name">Name</label>
+          <label id="label-name" for="name">Name</label>
           <input id="name" name="name" type="text" required />
 
-          <label for="email">E-Mail</label>
+          <label id="label-email" for="email">E-Mail</label>
           <input id="email" name="email" type="email" required />
 
-          <label for="company">Unternehmen</label>
+          <label id="label-company" for="company">Unternehmen</label>
           <input id="company" name="company" type="text" />
 
-          <label for="message">Projektbeschreibung</label>
+          <label id="label-message" for="message">Projektbeschreibung</label>
           <textarea id="message" name="message" rows="5" required></textarea>
 
           <input
@@ -180,15 +242,18 @@
           <label class="consent-row" for="privacy-consent">
             <input id="privacy-consent" name="privacy-consent" type="checkbox" required />
             <span>
-              Ich habe die
-              <a href="./datenschutz.html" target="_blank" rel="noopener noreferrer"
+              <span id="consent-before">Ich habe die</span>
+              <a id="consent-privacy" href="./datenschutz.html" target="_blank" rel="noopener noreferrer"
                 >Datenschutzerklaerung</a
               >
-              gelesen und bin mit der Verarbeitung meiner Daten zur Kontaktaufnahme einverstanden.
+              <span id="consent-after"
+                >gelesen und bin mit der Verarbeitung meiner Daten zur Kontaktaufnahme
+                einverstanden.</span
+              >
             </span>
           </label>
 
-          <button class="button" type="submit">Anfrage senden</button>
+          <button id="submit-btn" class="button" type="submit">Anfrage senden</button>
           <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
         </form>
       </section>
@@ -197,8 +262,8 @@
     <footer class="site-footer">
       <p>&copy; <span id="year"></span> NextEDI.ai Consulting</p>
       <nav aria-label="Rechtliche Links">
-        <a href="./impressum.html">Impressum</a>
-        <a href="./datenschutz.html">Datenschutz</a>
+        <a id="footer-imprint" href="./impressum.html">Impressum</a>
+        <a id="footer-privacy" href="./datenschutz.html">Datenschutz</a>
       </nav>
     </footer>
 

@@ -1,18 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://dk1189.github.io/edi-consulting/</loc>
+    <loc>https://nextedi.ai/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://nextedi.ai/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://nextedi.ai/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nextedi.ai/" />
   </url>
   <url>
-    <loc>https://dk1189.github.io/edi-consulting/impressum.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
+    <loc>https://nextedi.ai/en/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://nextedi.ai/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://nextedi.ai/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nextedi.ai/" />
   </url>
   <url>
-    <loc>https://dk1189.github.io/edi-consulting/datenschutz.html</loc>
+    <loc>https://nextedi.ai/impressum.html</loc>
     <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://nextedi.ai/datenschutz.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 </urlset>
